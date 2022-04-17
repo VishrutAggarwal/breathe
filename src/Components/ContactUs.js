@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactUs = () => {
   return (
-    <div id="contact-us">
+    <div id="contact-us" className="page">
         <div id="contact-box">
             <button type="button" className="contact-us-button">
                 Contact Us
