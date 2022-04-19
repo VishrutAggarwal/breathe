@@ -11,8 +11,8 @@
   --ff-Inter: "Inter";
 
   /* Color */
-  --orange-top: #f98f70;
-  --orange-bottom: #ffd7cb;
+  --orange-top: rgb(249, 143, 112);
+  --orange-bottom: rgb(255, 215, 203);
   --orange-darker: hsl(14, 92%, 54%);
   --blue-top: 
   --color-black: #000000;
@@ -75,6 +75,7 @@ body {
   padding: 1rem;
   width: 100%;
   position: fixed;
+  background-color: #ffffff4a;
 }
 
 #header-nav {
@@ -92,11 +93,15 @@ body {
   color: var(--orange-darker)
 }
 
-#header a:active {
+#header-nav a:active {
   color: var(--orange-darker);
   text-decoration: underline;
-  text-underline-offset: 3px;
+  /* text-underline-offset: 3px; */
 }
+
+/* #header #header-nav .current{
+  color: yellow;
+} */
 
 /* HOMEPAGE */
 
@@ -113,7 +118,7 @@ body {
   height: 25rem;
   width: 50rem;
   border-radius: 1rem;
-  border: 2px solid red;
+  border: 2px solid white;
 }
 
 #brain-image {
@@ -121,21 +126,42 @@ body {
   margin-bottom: 2rem;
 }
 
+#imgBrain{
+  border-radius: 50px;
+  width: 150px;
+  height: 100px;
+}
+
 #main-page-logo {
   font-size: 2.5rem;
-  margin-top: 12rem;
+  margin-top: 7rem;
+  /* margin-bottom: 2rem; */
 }
 
 #home-buttons {
-  border: 2px solid red;
-  /* margin-top: 5.5rem; */
+  /* border: 2px solid red; */
+  /* margin-top: 5rem; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 2px;
   border-radius: var(--home-buttons);
-  width: 20rem;
-  height: 3rem;
-  background-color: var(--color-white);
+  margin-top: 3rem;
+  background-color: gray;
+  
+}
+
+.main-buttons{
+  /* margin-top: 2rem; */
+  background-color: rgb(239, 227, 227);
+  width: 15rem;
+  height: 75px;
+  cursor: pointer;
+  font-weight: bold;
+  
+}
+
+.main-buttons:hover{
+  background-color: rgb(202, 178, 178);
 }
 
 #home-page button {
@@ -152,7 +178,67 @@ body {
 
 /* QUESTIONNAIRE */
 
+#questionnaire {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.inner-box {
+  padding: 2rem;
+  height: 50rem;
+  width: 80rem;
+  background-color: var(--orange-bottom);
+  border-radius: 3rem;
+}
+
+.inner-box #questionnaire-heading {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.inner-box hr {
+  border: 1px solid var(--color-white);
+}
+
+.inner-box ul {
+  list-style: none;
+}
+
+.inner-box form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1rem;
+}
+
+.inner-box form div div p{
+  margin-bottom: 0.7rem;
+  margin-top: 1rem;
+}
+
+.inner-box form div div div input{
+  margin-right: 0.3rem;
+  margin-left: 0.6rem;
+}
+
+#submit-btn{
+  background-color:rgb(188, 198, 208);
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  margin-left: 250px;
+  margin-top: -50px;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  scroll-behavior: smooth;
+}
+
+#submit-btn:hover{
+  background-color: rgba(0, 0, 0, 0.238);
+}
 
 /* SYMPTOM */
 
@@ -167,8 +253,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 30rem;
-  width: 25rem;
-  border: 2px solid red;
+  width: 43.5rem;
+  /* border: 2px solid red; */
   border-radius: 3rem;
 }
 
@@ -178,7 +264,7 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 
 }
 
@@ -193,7 +279,20 @@ body {
 #symptom-page-image {
   height: 20rem;
   width: 10rem;
-  border: 2px solid red;
+  /* border: 2px solid red; */
+}
+
+#symp-img{
+  margin-top: -80px;
+  margin-left: 250px;
+  border-radius: 50px;
+  width: 300px;
+  height: 500px;
+  /* opacity: 0.9; */
+}
+
+#graph{
+  border-radius: 25px;
 }
 
 /* RESOURCES */
@@ -209,26 +308,81 @@ body {
   display: flex;
   flex-direction: column;
   height: 30rem;
-  width: 25rem;
-  border: 2px solid red;
+  width: 100%;
+  background-color: rgb(238, 238, 255);
   border-radius: 3rem;
+  margin-right: -4rem;
 }
 
 #resource-card-header {
   display: flex;
   height: 5rem;
   width: 100%;
+  margin-top: -0.2rem;
   justify-content: center;
+  border-radius: 20px 20px 0 0;
   align-items: center;
-  border: 2px solid red;
-
+  background-color: rgb(188, 198, 208);
+  color: white;
+  font-size: 1.5rem;
 }
 
 #resource-page-image {
   height: 20rem;
   width: 10rem;
-  border: 2px solid red;
+  margin-right: 750px;
 }
+
+#resource-options{
+  margin: 3.5rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+.resource-buttons{
+  cursor: pointer;
+  background-color: rgb(225, 205, 205);
+  border-radius: 20px;
+  border: none;
+  width: 150px;
+  height: 50px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+}
+
+.img-re {
+  margin-bottom: 1rem;
+}
+
+.youtube {
+  margin-top: -1.5rem;
+  margin-right: -1rem;
+}
+
+#imgHead2{
+  margin-top:-210px;
+  border-radius: 0 50% 50% 0;
+  height: 750px;
+  /* wid */
+} 
 
 /* CONTACT US */
 
